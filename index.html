@@ -1,11 +1,226 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 
+<head>
+  <title>Nate Strohmyer</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+</head>
 
-<body>
-	<h1>Hello World</h1>
-	<p>test</p>
-</body>
+<nav class="navbar navbar-inverse navbar-fixed-top">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <a class="navbar-brand" href="index.html">Nate Strohmyer</a>
+    </div>
+    <ul class="nav navbar-nav">
+      <li class="active"><a href="index.html">Games</a></li>
+      <li><a href="Programming.html">Programming</a></li>
+      <li><a href="LevelDesign.html">Level Design</a></li>
+      <li><a href="ContactResume.html">Contact & Resume</a></li>
+    </ul>
+  </div>
+</nav>
 
+<div class="jumbotron">
+	<div class="container text-left">
+		<h1>Games</h1>
+		<p>A collection of the games I've worked on so far!</p>
+	</div>
+</div>
+
+<div class="container">
+	<body style="background-color:lightgrey; margin-top:50px;">
+	
+	<div class="container-fluid" style="background-color:lightgrey; margin-bottom:25px;">
+		<div class="row">
+			<div class="col-md-6">
+				<iframe width="560" height="315" src="https://www.youtube.com/embed/6hTod73iicE" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+				
+				<div id="myCarousel" class="carousel slide" data-ride="carousel">
+					<!-- Indicators -->
+					<ol class="carousel-indicators">
+						<li data-target="#myCarousel" data-slide-to="0"></li>
+						<li data-target="#myCarousel" data-slide-to="1"></li>
+						<li data-target="#myCarousel" data-slide-to="2"></li>
+						<li data-target="#myCarousel" data-slide-to="3"></li>
+						<li data-target="#myCarousel" data-slide-to="4"></li>
+						<li data-target="#myCarousel" data-slide-to="5" class="active"></li>
+						<li data-target="#myCarousel" data-slide-to="6"></li>
+					</ol>
+					
+					<!-- Wrapper for slides -->
+					<div class="carousel-inner">
+						<div class="item">
+						<img src="src/PA.png">
+						</div>
+					
+						<div class="item">
+						<img src="src/PA1.png">
+						</div>
+					
+						<div class="item">
+						<img src="src/PA2.png">
+						</div>
+						
+						<div class="item">
+						<img src="src/PA3.png">
+						</div>
+						
+						<div class="item">
+						<img src="src/PA4.png">
+						</div>
+						
+						<div class="item active">
+						<img src="src/PA5.png">
+						</div>
+						
+						<div class="item">
+						<img src="src/PA6.png">
+						</div>
+					</div>
+					
+					<!-- Left and right controls -->
+					<a class="left carousel-control" href="#myCarousel" data-slide="prev">
+						<span class="glyphicon glyphicon-chevron-left"></span>
+						<span class="sr-only">Previous</span>
+					</a>
+					<a class="right carousel-control" href="#myCarousel" data-slide="next">
+						<span class="glyphicon glyphicon-chevron-right"></span>
+						<span class="sr-only">Next</span>
+					</a>
+				</div>
+			</div>
+			
+			<div class="col-md-6">
+				<h1>The Archon Project - UE4</h1>
+				<div><h4>Out now on <a href="https://thearchonprojectgame.itch.io/the-archon-project" target="_blank">itch.io</a>!</h4></div>
+				<p>The Archon Project is a third-person rougelite, action game focused on fighting other sentinels(robots), exploring environments and evolving your sentinel to be the apex predator. 
+					The Archon Project was built over the Spring 2021 semester by 9 students and involved many complex systems built in Unreal Engine 4. My main contributions were in engineering but I also played a role in
+					game design and level design.
+				</p>
+				<h4> My Contributions: </h4>
+				<ul>
+					<li>Game Design and Game Balancing</li>
+					<li>Level Design: City Block, Desert Giant's Grave, Grass Stone Henge</li>
+					<li>Rapid protyping of combat abilities/traits</li>
+					<li>Map Generation: Built a custom hextile spawner and tileset editor of sorts that spawned custom hextiles (biomes). Uses level streaming to handle numerous tiles while keeping performant and keep state.</li>
+					<li>Encounter Spawning: A robust system built to spawn AI enemies for the game with the idea of spawning different combinations of or different AI as the game progresses to create difficulty rather than just increasing stats of enemies.
+						Was also built with replayability in mind as it lets designers choose different combinations of AI to spawn with different chances, essentially randomizes enemy encounters the player will have.
+					</li>
+					<li>HexLock System: System to keep player contained to a tile until they "Decode" the forcefield. Provides a immeadiate goal for the player and puts some control on the pacing of the game.</li>
+				</ul>
+			</div>
+		</div>
+	</div>
+	
+	<hr style="height:2px;border-width:0;color:gray;background-color:gray">
+	
+	<div class="container-fluid" style="background-color:lightgrey; margin-bottom:50px;">
+		<div class="row">
+			<div class="col-md-6">
+				<iframe src="https://drive.google.com/file/d/17YfVNgyexcaKWtIfxomoW39IOEdMTsBd/preview" width="560" height="315"></iframe>
+			</div>
+			
+			<div class="col-md-6">
+				<h1>Familiar Souls - UE4 and Twitch</h1>
+				<p>Familiar Souls is a exploration game in which the player must escape a maze and avoid the giant cat lurking in the maze built in ~3 weeks by ~10 students. However, there's a twist in that
+					the game requires the player to be streaming and use Twitch chat to solve puzzles, survive and escape. In the video on the left you are seeing what Twitch chat can see, the player can only see the
+					bottom screen and must rely on information present in the top screen. Additionally, Twitch chat can use chat commmands to guide the player through the maze and solve puzzles (like raise/lower platforms or doors).
+				</p>
+				
+				<h4> My Contributions: </h4>
+				<ul>
+					<li>Game Design: Interesting challenge of a game designed specifically to interact with Twitch chat.</li>
+					<li>Twitch Integration: Twitch chat can do numerous commands to effect gameplay such as deciding what power-ups spawn, moving platforms, or opening doors. I was in charge of capturing this input from
+						Twitch and add it to a vote system that would decide what would happen in game. I also created a system that would message Twitch chat with the commands they could use at that moment.
+					</li>
+					<li>UI: I also did all of the UI programming for the game. The UI itself wasn't too complicated however Twitch chat could give a direction hint that was tied to the UI (left side of the player screen).
+						The UI also incorporated a stream of Twitch chat so the player didn't have to look away from the screen to get information from the chat.
+					</li>
+				</ul>
+			</div>
+		</div>
+	</div>
+	
+	<hr style="height:2px;border-width:0;color:gray;background-color:gray">
+	
+	<div class="container-fluid" style="background-color:lightgrey; margin-bottom:50px;">
+		<div class="row">
+			<div class="col-md-6">
+			<iframe src="https://drive.google.com/file/d/14GH014CP6CFaHw51XFOwGfmSYt5VvZep/preview" width="560" height="315"></iframe>
+			</div>
+			
+			<div class="col-md-6">
+				<h1>Darkroom - Unity</h1>
+				<p>Darkroom is a more serious game in that this was a game designed to teach players how photography was once done, in a dark room! This vertical slice of a game takes players
+					through the process of developing a photo and even provides some interesting information about Utah wildlife. Darkroom was also built with usability in mind as all you need
+					is your phone to experience this AR game.
+				</p>
+				
+				<h4> My Contributions: </h4>
+				<ul>
+					<li>Game Programming: Did a lot of interesting programming and design with this AR phone control in mind. For example, the player uses the gyroscope feature in their phone
+						to explore the game.
+					</li>
+				</ul>
+			</div>
+		</div>
+	</div>
+
+	<hr style="height:2px;border-width:0;color:gray;background-color:gray">
+
+	<div class="container-fluid" style="background-color:lightgrey; margin-bottom:50px;">
+		<div class="row">
+			<div class="col-md-6">
+				<iframe src="https://drive.google.com/file/d/1-dVyQHdAyMcoA3pl0qClKVdtbCImr9Pm/preview" width="560" height="315"></iframe>
+			</div>
+			
+			<div class="col-md-6">
+				<h1>Sharkbomber - Phaser</h1>
+				<p>Sharkbomber is a 2D platformer that is about a Shark that must avoid mines and toxic goo in order to eat the fisherman on the surface and finally get some much needed peace!
+					Sharkbomber is based on the classic arcade game Donkey Kong, but designed around the question of "What if Donkey Kong was underwater?". This interesting iteration on the classic really 
+					forced some interesting design decsisions as we modified the core mechanic and make it fun!
+				</p>
+				
+				<h4> My Contributions: </h4>
+				<ul>
+					<li>Game Design</li>
+					<li>Game Programming</li>
+					<li>Game Systems</li>
+				</ul>
+			</div>
+		</div>
+	</div>
+	
+	<hr style="height:2px;border-width:0;color:gray;background-color:gray">
+	
+	<div class="container-fluid" style="background-color:lightgrey; margin-bottom:50px;">
+		<div class="row">
+			<div class="col-md-6">
+				<iframe src="https://drive.google.com/file/d/1zAgiMtU6xZ5eookDMFI7JMdeysY-x-Wx/preview" width="560" height="315"></iframe>
+			</div>
+			
+			<div class="col-md-6">
+				<h1>Bounce - Monogame</h1>
+				<p>Bounce is a 2D platformer that is all about gaining momentum to clear jumps and defeat enemies. Certain enemies can only be destroyed by achieving max momentum and the player must balance speed
+					and caution. Bounce was designed around an interesting premise in that we were assigned a random toy (a paddle ball in this case) and had to make a game based off of what makes that toy fun.
+					In the case of the paddle ball, we decided that the pressure to keep building up momentum and keeping that ball bouncing was what made it fun and tried to capture that feeling in a game.
+				</p>
+				
+				<h4> My Contributions: </h4>
+				<ul>
+					<li>Game Design</li>
+					<li>Game Programming </li>
+					<li>Game Systems: Had to write many of the systems we used ourselves. For example, I wrote the simple animation system our game used. </li>
+				</ul>
+			</div>
+		</div>
+	</div>
+	
+	</body>
+</div>
 
 </html>
