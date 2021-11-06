@@ -69,13 +69,25 @@
 		
 		<li><a style="color: black; background-color:#c8d8e4;margin-top:10px;" data-toggle="collapse" href="#GameEngine"><h1>C++ Game Engine</h1></a></li>
 		<div id="GameEngine" class="collapse" style="color: black; background-color:#c8d8e4;padding:15px;">
-			Lorem ipsum dolor sit amet, consectetur adipisicing elit,
-			sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-			quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
-			
+			<p>
+			Over the course of 2 semesters I've built up 2 engines in C++. Each engine has focused on different areas but both taught me endless lessons both in terms of game programming and C++ in general. My 
+			first engine was built up almost entirely from scratch and focused on a lot of base systems like simple physics movement and timing system. This also gradually built up over time to read in and make
+			game objects from Json. These systems also had a basic ECS (entity component system in place). This engine also got me fairly familiar with complex math related to games such as matrices. Lastly I implemented 
+			2d bounding box collision in this engine. Doing all these basic systems really puts into perspective how complicated engines can be and really comes in handy no matter what your doing. The Video below is a simple 
+			soccer game that uses this 2d engine. 
+			</p>
 			<div style="margin: auto; width: 100%; padding: 10px;">
 			<iframe src="src/2DSoccerEngineTest.mp4" width="100%" height="472.5"></iframe>
 			</div>
+			<p>
+			My second engine gave us a nice starting point, but we immediately dived into complex and interesting topics. For example, one of the major focuses of the engine is platform specific code (mainly Direct3D vs 
+			OpenGL implementations), specifically how to make it easiest to look at and most efficient. I also dived into graphics programming a bit. This project taught me a lot about how geometry and effects are actually
+			rendered. For example, this project required us to make vertex and index arrays to properly render meshes, we also had to keep winding order in mind based off which platform we were on. This project also exposed
+			us to some basic shader programming, and even making those platform independent! We also did some very 
+			interesting serialization of mesh data. We got mesh data (position, color of vertex and the index array) from Maya and wrote it to a Lua file. This allowed us to put any (limited to around 65,000 vertices) model 
+			directly into our engine which was really cool! We also took this one step further when we converted that human readable Lua file to a binary file that was both much faster and secure. I look forward to developing 
+			this engine further and even making a basic game in it! Below is a example of the engine running with some simple geometry imported from Maya(color was set in Maya)!
+			</p>
 			<div style="margin: auto; width: 100%; padding: 10px;">
 			<iframe src="src/C++Engine.mp4" width="100%" height="472.5"></iframe>
 			</div>
