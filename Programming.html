@@ -27,14 +27,362 @@
 <div class="jumbotron">
 	<div class="container text-left">
 		<h1>Programming</h1>
-		<p>Some of the interesting things I've done! - WIP</p>
+		<p>Some of the interesting things I've done!</p>
 	</div>
 </div>   
 
 <div class="container">
-	<body style="background-color:lightgrey; margin-top:50px;">
+	<body style="background-color:#2b6777; margin-top:50px; margin-bottom:50px;">
 	
-        
+    <div class="container">		
+		<ul class="nav nav-pills nav-stacked">
+		
+		<li><a style="color: black; background-color:#c8d8e4; margin-top:10px;" data-toggle="collapse" href="#GridSystem"><h1>UE4 Grid System - With Z Levels!</h1></a></li>
+		<div id="GridSystem" class="collapse" style="background-color:#c8d8e4;">
+			<div style="padding: 10px; background-color:#c8d8e4;">
+			<p>
+			My most recent game Sword of Atlas (name subject to change) is a TRPG that is trying to take the ATB (active time battle) components from games like Final Fantasy 13 and the grid combat
+			of something like Fire Emblem. This required us to build many systems from the ground up and one of them was a grid system that could support tile based movement and functionality for 
+			other tile based things like tile envirenment effects (EX: mud or water tiles slowing a character).
+			</p>
+			<p>Challenges I Faced:</p>
+			<ul>
+					<li>Drawing the grid in a efficient manner - the whole grid is one procedural mesh</li>
+					<li>Z Levels (elevation)</li>
+					<li>A Star Pathfinding on a Grid - First Video</li>
+					<li>Getting All Walkable Tiles - Second Video</li>
+					<li>Different Tile Effects - EX: player can't walk over holes, water requires more movement range</li>
+					<li>Tile Drawing - given a list of tiles, the grid system needs to be able to draw those tiles efficiently</li>
+				</ul>
+			</div>
+			
+			<div style="margin: auto; width: 100%; padding: 10px;">
+			<iframe src="src/AStarShow.mp4" width="100%" height="472.5"></iframe>
+			</div>
+			<div style="margin: auto; width: 100%; padding: 10px;">
+			<iframe src="src/GetAllViableTilesShow.mp4" width="100%" height="472.5"></iframe>
+			</div>
+			
+		</div>
+		
+		<li><a style="color: black; background-color:#c8d8e4;margin-top:10px;" data-toggle="collapse" href="#GameEngine"><h1>C++ Game Engine</h1></a></li>
+		<div id="GameEngine" class="collapse" style="color: black; background-color:#c8d8e4;padding:15px;">
+			Lorem ipsum dolor sit amet, consectetur adipisicing elit,
+			sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+			quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+			
+			<div style="margin: auto; width: 100%; padding: 10px;">
+			<iframe src="src/2DSoccerEngineTest.mp4" width="100%" height="472.5"></iframe>
+			</div>
+			<div style="margin: auto; width: 100%; padding: 10px;">
+			<iframe src="src/C++Engine.mp4" width="100%" height="472.5"></iframe>
+			</div>
+			
+		</div>
+
+		<li><a style="color: black; background-color:#c8d8e4;margin-top:10px;" data-toggle="collapse" href="#MemManager"><h1>C++ Memory manager</h1></a></li>
+		<div id="MemManager" class="collapse" style="color: black; background-color:#c8d8e4;padding:15px;">
+		<p>
+		For my intro C++ course, we implemented fairly basic but functional memory manager to avoid making numerous calls to the default new and delete C++ operators. This ends up being very helpful given that 
+		new calls can be very costly and by writing our own memory manager you control what happens and can do vital operations and leave out any extra functionality. This project also taught me tons about C++ 
+		and low-level memory management, some things you can only really know once you’ve delved this low level and seen exactly how a memory manager works. This project also taught me a lot about pointers and 
+		casting as much implementation centers around pointer arithmetic and void pointers.
+		</p>
+		<p>Features of the Memory Manager:</p>
+		<ul>
+			<li>Fixed and Dynamic Size Allocations</li>
+			<li>Variable Byte Alignemnt</li>
+			<li>Freeing and Coalescing Memory</li>
+			<li>Bit Array (similar to std::BitSet) implementation</li>
+		</ul>
+		
+		</div>
+
+		<li><a style="color: black; background-color:#c8d8e4;margin-top:10px;" data-toggle="collapse" href="#TileGenerator"><h1>UE4 Tile Map Generator</h1></a></li>
+		<div id="TileGenerator" class="collapse" style="color: black; background-color:#c8d8e4;padding:15px;">
+			<p>
+			The tile map generator was a map system built for The Archon Project. The overall map in this game is built of various hex tiles that represent a different play area and biome. The overall goal of this 
+			system was to offer a good way to have random and interesting maps while at the same time give designers control over the maps. It essentially works as a randomizer for designer created content. For example, 
+			designers specify the layout of the tiles in the map and they can choose what biome that tile will be (they can also choose random if they don’t care what biome it will be). This was very helpful as it allowed 
+			designers to map out exactly what they wanted the map to look like without actually placing everything in one map. The designers can also specify where the start and end are, controlling the pace of the map in a 
+			way. Once a map loaded each biome can select from an instance of that biome. This was especially helpful as players would see different tiles and combinations of tiles/biomes. These instances of biomes were also 
+			all handcrafted so each one was interesting and fun to explore, the user never gets that “generated” feeling from the map. The examples below are actually the same map, the picture is the tileset. This is what 
+			the designer would map out and decide what tile is what. The video shows the tileset in game. The video also shows another very important part of this system, level streaming. Each tile is loaded in and out 
+			(except the start and end tile) based on player proximity. This allows us to have huge, detailed, sprawling maps and keep the game running efficiently.
+			</p>
+			<div style="margin: auto; width: 100%; padding: 10px;">
+			<img src="src/TileEditor2.png" width="100%" height="600">
+			</div>
+			<div style="margin: auto; width: 100%; padding: 10px;">
+			<iframe src="src/LevelLoadingBig.mp4" width="100%" height="472.5"></iframe>
+			</div>
+			
+		</div>
+
+		<li><a style="color: black; background-color:#c8d8e4;margin-top:10px;" data-toggle="collapse" href="#EntitySpawner"><h1>UE4 Entity Spawner</h1></a></li>
+			<div id="EntitySpawner" class="collapse" style="color: black; background-color:#c8d8e4;padding:15px;">
+			<p>
+			The entity spawner was another system made for The Archon Project. The goal of this system was to make combat and pacing through a biome more dynamic. Essentially this system was responsible for all the 
+			spawning of AI enemies in a biome. However, it did much more than that behind the scenes. I built a system that allowed the definition of different combinations of AI to be spawned along with a way to 
+			specify the likely hood of that combination. This allowed for a designer to design a number of encounters and just plug them into this system and see that encounter in multiple places. This system also 
+			served as the progression/difficulty system. As the user progressed further and further, it would start pulling from encounters defined for harder levels. This system also allowed for mini-bosses of sorts 
+			since they could be just another encounter with a low chance to spawn. In the video below you’ll see me start up the desert map multiple times and if you pay attention you’ll notice that different enemies 
+			and combinations of enemies spawn in different places.
+			</p>
+			<div style="margin: auto; width: 100%; padding: 10px;">
+			<iframe src="src/EncounterShow.mp4" width="100%" height="472.5"></iframe>
+			</div>
+			
+		</div>
+		
+		<li><a style="color: black; background-color:#c8d8e4;margin-top:10px;" data-toggle="collapse" href="#ITOM"><h1>I.T.O.M. - Item Trading Over an online Marketplace</h1></a></li>
+			<div id="ITOM" class="collapse" style="color: black; background-color:#c8d8e4;padding:15px;">
+			<h2>Pictures and snippets coming soon!</h2>
+			
+			<p>I.T.O.M. was the capstone project for my CS undergrad I worked on with another student over a year (one semester proposal and planning, one semester of implementation). The overall goal of this project 
+			was to create a cross game item trading marketplace website for the games Minecraft and Runescape. In the end we only got around to implementing the game end handler for Minecraft but the rest of the system 
+			accounted for items from different games. This essentially works by logging into the website and connecting your game accounts and then specifying a trade you want. Our system would then send specifying items 
+			to the game end handler and required you to deposit items that you are offering for the trade. Once this step was completed, the user would just wait until the trade is accepted and completed (much like adding 
+			items to a trade, completing a trade requires the user to give the specified items). Once the trade is completed both players can then go to the website and claim their rewards which delivers the items they got 
+			from the trade. This project ended up encapsulating a lot requiring us to do full stack development as we touched a front end, database, application (Minecraft mod and Runescape bot) and a backend to communicate 
+			with everything. Since this project was fairly independent and encapsulated so much I ended up learning a lot.
+			</p>
+			<p>I.T.O.M. Systems</p>
+			<ul>
+				<li>Front end website to show and facilitate trades and connecting accounts</li>
+				<li>Minecraft mod game end handler - serialization of game items, networking protocols for sending data to backend</li>
+				<li>Database for storing trades and item info</li>
+				<li>Backend for communicating between everyhthing - Javaspring, networking protocols for game end handlers</li>
+			</ul>
+			
+			
+		</div>
+
+		<li><a style="color: black; background-color:#c8d8e4;margin-top:10px;" data-toggle="collapse" href="#SPE"><h1>C++ Stream Processing Engine</h1></a></li>
+		<div id="SPE" class="collapse">
+			<div style="background-color:#c8d8e4; padding:15px">
+			
+			<body>
+			The SPE (stream processing engine) is a research project my classmates and I worked to develop over a semester with the goal of creating a data processing framework that executes queries while consuming an endless amount of data, implemented in C++. This particular file is a driver that I created with two others to find all of a desired ore in an entire Minecraft region (for reference, chunks are 16 blocks wide, 16 blocks long and 256 blocks in height. Regions are 32 by 32 chunks) and print out the most valuable chunk in that region, along with the global locations of every desired ore in that chunk. The main structure of the SPE revolves around its operators which are what data is passed through as our program receives it. This specific example has three operators and an InputSource which is very similar in implementation to the operator class but instead of a queue in which the operator pulls data from, it has its own generate data function that can be defined as the user sees fit. The InputSource in this driver receives data from a TCP connection with a mod running on a Minecraft instance. The first operator is a ChunkProcessor that goes through an entire chunk and assigns it a value based off of the ore it found, and the player position it was given. The next operator that data goes through is the ChunkSelect operator which uses a sliding "window" to see various data over time, in this case it is a region worth of chunks. This operator passes on `emit()` the chunk with the highest value. The final operator is a print operator which prints the id of the best chunk along with all of the locations of the desired ore in that chunk. This final operator also sends this information back to the Minecraft instance through a TCP connection. Finally, it is important to note that the Minecraft mod is periodically prompting the SPE for the best chunk based off of the player location, and the SPE is giving them the best chunk in the region they’re in based off of that location and contents of that chunk.
+			</body>
+			
+			<pre>
+// Copyright 2019 [BVU CMSC491 class]
+#include &ltiostream>
+#include &ltfstream>
+#include &ltsstream>
+#include &ltstring>
+#include &ltvector>
+#include &ltcmath>
+#include "SPE.h"
+#include "TCPListener.h"
+#include "MinecraftRegionLoader.h"
+
+
+TCPListener listener;
+
+struct aggData {
+  float chunkVal;
+  pos chunkID;
+  std::vector&ltpos>* oreLocations;
+} typedef aggData;
+
+
+float calcDistance(pos playerPos, pos chunkPos) {
+  float x = pow(playerPos.x - chunkPos.x, 2);
+  float y = pow(playerPos.y - chunkPos.y, 2);
+  float z = pow(playerPos.z - chunkPos.z, 2);
+  float dist = sqrt(x+y+z);
+  return dist;
+}
+
+
+pos getBlockPos(int i, pos globalChunkPos) {
+  //i = y*16*16 + z*16 + x
+  pos p;
+  int relx, rely, relz, diff;
+
+  rely = i/256;
+  diff = i-(rely*256);
+  relx = diff % 16;
+  relz = (diff - relx)/16;
+
+  p.y = rely + globalChunkPos.y;
+  p.z = relz + globalChunkPos.z;
+  p.x = relx + globalChunkPos.x;
+
+  return p;
+}
+
+
+class ChunkSelect : public Operator {
+  public:
+    ChunkSelect(int r, int s) : Operator(r, s) {}
+    void processData(Data data) {
+      std::cout &lt&lt "chunk select recv one data" &lt&lt std::endl;
+      emit(Data(&data, sizeof(aggData)));
+      std::cout &lt&lt "chunk select emit data" &lt&lt std::endl;
+    }
+
+    void processData() {
+      std::cout &lt&lt "chunk select recv data" &lt&lt std::endl;
+      aggData bestAgg;
+      bestAgg.chunkVal = -1;
+      for (Data d : window) {
+        if(bestAgg.chunkVal == -1 || bestAgg.chunkVal &lt (*(aggData*)d.value).chunkVal ) {
+          if(bestAgg.chunkVal != -1) {
+            delete bestAgg.oreLocations;
+          }
+          bestAgg = *(aggData*)(d.value);
+        }
+        else {
+          delete (*(aggData*)d.value).oreLocations;
+        }
+      }
+
+      std::cout &lt&lt "chunk select emit data" &lt&lt std::endl;
+      emit(Data(&bestAgg, sizeof(aggData)));
+    }
+};
+
+
+class ChunkProcessor : public Operator {
+  public:
+    void processData(Data data) {
+      //std::cout &lt&lt "chunk procesessor recv data" &lt&lt std::endl;
+      ChunkData &chunk = *(ChunkData*)data.value;
+
+      // Handle an empty chunk
+      if (chunk.empty == true) {
+        aggData dataToPass;
+        dataToPass.oreLocations = new std::vector&ltpos>;
+        dataToPass.chunkVal = 0;
+         
+        //std::cout &lt&lt "[empty] chunk procesessor emit data" &lt&lt std::endl;
+        emit(Data(&dataToPass, sizeof(aggData)));
+        return;
+      }
+
+      // Handle an non-empty chunk
+      float count = 0;
+      aggData dataToPass;
+      std::vector&ltpos>* oreLocations = new std::vector&ltpos>;
+      dataToPass.chunkID = chunk.globalChunkPos;
+
+      dataToPass.oreLocations = oreLocations;
+      for(int i = 0; i&lt65536 ; i++) {
+        if(chunk.chunk[i] == chunk.oreID){
+          count++;
+          oreLocations->push_back(getBlockPos(i, chunk.globalChunkPos));
+        }
+      }
+
+      dataToPass.chunkVal = count/calcDistance(chunk.playerPos, chunk.globalChunkPos);
+
+      //std::cout &lt&lt "[non-empty] chunk procesessor emit data with #ores:" &lt&lt oreLocations->size() &lt&lt std::endl;
+      emit(Data(&dataToPass, sizeof(aggData)));
+    }
+};
+
+
+class Generator : public InputSource {
+  void generateData() {
+
+    std::cout &lt&lt "Waiting for data from mod..." &lt&lt std::endl;
+
+    std::string strPos;
+    while ( (strPos = listener.GetLine()) != "") {
+      std::istringstream is(strPos);
+      pos playerPos;
+      is >> playerPos.x >> playerPos.y >> playerPos.z;
+      std::cout &lt&lt "Player pos at: " &lt&lt
+        playerPos.x &lt&lt " " &lt&lt
+        playerPos.y &lt&lt " " &lt&lt
+        playerPos.z &lt&lt std::endl;
+
+      //pos playerPos = {0,0,0};
+      MinecraftRegionLoader loader(playerPos);
+      std::vector&ltChunkData*> chunks = loader.extractChunkData();
+
+      for(int i=0; i &lt chunks.size(); i++) {
+        chunks[i]->oreID = 26;
+        emit(Data(chunks[i], sizeof(ChunkData)));
+      }
+
+      std::cout &lt&lt "Produced " &lt&lt chunks.size() &lt&lt "chunks. Waiting for more data from mod..." &lt&lt std::endl;
+    }
+
+    std::cout &lt&lt "Minecraft Mod Disconnected" &lt&lt std::endl;
+  }
+};
+
+
+class PrintOp : public Operator{
+  public:
+    void processData(Data data){
+
+      //std::cout &lt&lt "chunk print recv data" &lt&lt std::endl;
+      aggData bestChunk = *(aggData*)data.value;
+      std::vector&ltpos> ores = *(bestChunk.oreLocations);
+      //std::cout &lt&lt "ores size: " &lt&lt ores.size() &lt&lt std::endl;
+      for(int i=0; i&ltores.size(); i++){
+       std::cout &lt&lt"Chunk: " &lt&lt bestChunk.chunkID.x &lt&lt " " &lt&lt bestChunk.chunkID.z &lt&lt " " &lt&lt bestChunk.chunkID.y &lt&lt std::endl;
+       std::cout &lt&lt"Desired Ore at pos: " &lt&lt std::endl;
+       std::cout &lt&lt "x: " &lt&lt ores[i].x &lt&lt std::endl;
+       std::cout &lt&lt "z: " &lt&lt ores[i].z &lt&lt std::endl;
+       std::cout &lt&lt "y: " &lt&lt ores[i].y &lt&lt std::endl;
+      }
+
+      if (ores.empty() == false) {
+        std::ostringstream os;
+        os &lt&lt "Get ore at " &lt&lt ores[0].x &lt&lt " " &lt&lt ores[0].y &lt&lt " " &lt&lt ores[0].z;
+        string msg = os.str();
+        uint8_t msgSz = msg.size();
+
+        listener.SendData((char*)&msgSz, sizeof(msgSz));
+        listener.SendData(msg.c_str(), msgSz);
+      }
+
+      delete bestChunk.oreLocations;
+    }
+};
+
+int main(int argc, char** argv) {
+  std::cout &lt&lt "SPE Starting up." &lt&lt std::endl;
+
+  int port = 12345;
+  listener.Bind(port);
+
+  std::cout &lt&lt "Waiting for connection..." &lt&lt std::endl;
+  if (listener.WaitForConnection() &lt= 0) {
+    std::cout &lt&lt "Error - failed to connect" &lt&lt std::endl;
+    return 0;
+  }
+
+  Generator inputSource;
+  ChunkProcessor op1;
+  ChunkSelect op2(1024, 1024);
+  PrintOp op3;
+
+  StreamProcessingEngine spe;
+
+  spe.addInputSource(&inputSource, {&op1});
+  spe.connectOperators(&op1, {&op2});
+  spe.connectOperators(&op2, {&op3});
+
+  spe.run();
+
+  std::cout &lt&lt "SPE Finished." &lt&lt std::endl;
+  return 0;
+}
+			</pre>
+			
+			</div>
+		</div>
+
+		</ul>
+
+	</div>
 	
 	</body>        
 </div>
