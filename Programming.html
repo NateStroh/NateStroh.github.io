@@ -72,7 +72,7 @@
 			<p>
 			Over the course of 2 semesters I've built up 2 engines in C++. Each engine has focused on different areas but both taught me endless lessons both in terms of game programming and C++ in general. My 
 			first engine was built up almost entirely from scratch and focused on a lot of base systems like simple physics movement and timing system. This also gradually built up over time to read in and make
-			game objects from Json. These systems also had a basic ECS (entity component system in place). This engine also got me fairly familiar with complex math related to games such as matrices. Lastly I implemented 
+			game objects from Json. These systems also had a basic ECS (entity component system in place). This engine also got me fairly familiar with complex math related to games such as matrices and transforms. Lastly I implemented 
 			2d bounding box collision in this engine. Doing all these basic systems really puts into perspective how complicated engines can be and really comes in handy no matter what your doing. The Video below is a simple 
 			soccer game that uses this 2d engine. 
 			</p>
@@ -92,6 +92,27 @@
 			<iframe src="src/C++Engine.mp4" width="100%" height="472.5"></iframe>
 			</div>
 			
+		</div>
+		
+		<li><a style="color: black; background-color:#c8d8e4;margin-top:10px;" data-toggle="collapse" href="#Asteroids"><h1>3D Asteroids Using My C++ Game Engine</h1></a></li>
+		<div id="Asteroids" class="collapse" style="color: black; background-color:#c8d8e4;padding:15px;">
+		<p>
+		I recently was tasked with combining my engine with a system made by another student and using this new system and my engine to make a game. For this project I decided to remake the game Asteroids as it had an easy MVP
+		to reach but you could do a lot if you wanted to. I also wanted an excuse to look into some interesting space shaders. I eneded up using another students collision system, and merging them was actually much easier 
+		than I thought it would be (mostly due to a well defined and designed system - Thanks Josh Butner!). Overall, this project presented plenty of interesting problems and taught me a lot about engine development and
+		gave me a good start on shader programming. One interesting problem I ran into but never really solved due to time constraints was the limitation of bounding box collision. Bounding box collision doesn't really work
+		once rotation is involved and unfortunately, Asteroids depends on rotation to move the player and shoot asteroids in the direction you are looking. If I ever come back to this project I really want to explore other 
+		forms of collision dectection and a robust way to read in gameobjects and their components from data.
+		</p>
+		<p>Interesting Features & Challenges:</p>
+		<ul>
+			<li>Entirely ECS (Entity Component System) driven</li>
+			<li>Bounding box collision - did use another students system and interface</li>
+			<li>All models and colors were made in Maya and then exported to my engine</li>
+			<li>Custom star shader - getting random pixels to represent stars</li>
+		</ul>
+		<img src="src/Nate's Asteroids.gif" width="75%" style="padding-left:25%; padding-bottom:20px; padding-top:20px;"/>
+		<img src="src/AsteroidsAssets.png" width="75%" style="padding-left:25%"/>
 		</div>
 
 		<li><a style="color: black; background-color:#c8d8e4;margin-top:10px;" data-toggle="collapse" href="#MemManager"><h1>C++ Memory manager</h1></a></li>
